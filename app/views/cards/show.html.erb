@@ -1,0 +1,21 @@
+<h1>Card Gerado</h1>
+
+<p>
+  <strong>Texto em português:</strong>
+  <%= @card.portugues %>
+</p>
+
+<p>
+  <strong>Texto em inglês:</strong>
+  <%= @card.ingles %>
+</p>
+
+<%= link_to 'Editar', edit_card_path(@card) %>
+<br>
+<br>
+
+<%= link_to 'Novo card', new_card_path %>
+
+<br>
+
+<%= link_to 'Inicio', root_path %>

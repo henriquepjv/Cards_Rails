@@ -1,0 +1,37 @@
+<h1>Novo Card</h1>
+
+<%= form_for :cards, url: cards_path do |f|   %>
+
+<% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@card.errors.count, "error") %> prohibited
+        this card from being saved:
+      </h2>
+      <ul>
+        <% @card.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :portugues %><br>
+    <%= f.text_field :portugues %>
+  </p>
+
+  <p>
+    <%= f.label :ingles %><br>
+    <%= f.text_field :ingles %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'voltar', root_path %>

@@ -1,0 +1,23 @@
+<h1>Edit Card</h1>
+
+<%= form_for :cards, url: cards_path do |f|   %>
+
+  <p>
+    <%= f.label :portugues %><br>
+    <%= f.text_field :portugues %>
+  </p>
+
+  <p>
+    <%= f.label :ingles %><br>
+    <%= f.text_field :ingles %>
+  </p>
+
+  <p>
+    <%= f.submit 'Atualizar' %>
+  </p>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Voltar', root_path %>
